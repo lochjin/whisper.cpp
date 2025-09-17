@@ -2,7 +2,9 @@ cmake_minimum_required(VERSION 3.5) # for add_link_options and implicit target d
 project("whisper.cpp" C CXX)
 project("whisper.cpp" VERSION 1.7.6)
 include(CheckIncludeFileCXX)
-
+if(POLICY CMP0077)
+    cmake_policy(SET CMP0077 NEW)
+endif()
 set(SOVERSION 1)
 
 #set(CMAKE_WARN_DEPRECATED YES)
